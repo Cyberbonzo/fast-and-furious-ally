@@ -34,13 +34,15 @@ def prepare():
         dest=ROOT/'game'/name;latest=ROOT/'saves/latest'/name
         if not dest.exists() and latest.exists():atomic(dest,latest.read_bytes())
     backup()
-    # Native Speed Measurements setting, not an overlay or cosmetic unit swap.
+    # Native preferences: KPH and difficulty 1 (easiest).
     for name in ('prefs','prefsbak'):
         p=ROOT/'game'/name
         if p.exists():
             data=bytearray(p.read_bytes())
             if len(data)!=4612 or data[:4]!=b'CFRP':raise RuntimeError('Unsupported preferences format')
-            struct.pack_into('<I',data,4+0x4cfe90-0x4cf968,1);atomic(p,data)
+            struct.pack_into('<I',data,4+0x4cfe90-0x4cf968,1)
+            struct.pack_into('<I',data,4+0x4cff90-0x4cf968,1)
+            atomic(p,data)
     path=ROOT/'state/profile.json'
     if not path.exists():
         atomic(path,json.dumps({'pin':str(secrets.randbelow(900000)+100000),'name':'ALLY','infinite_boost':False},indent=2).encode())

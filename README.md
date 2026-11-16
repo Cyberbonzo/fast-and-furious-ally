@@ -63,3 +63,5 @@ Arte personalizada pode ser aplicada pelo Steam usando imagens fornecidas pelo p
 ## Limites
 
 Validado no Ally com Bazzite, Proton 11.0 e DXVK D3D8. O alvo é 1080p a 60 FPS; isso não garante desempenho idêntico em todas as pistas, configurações de energia ou máquinas. Esta versão não oferece modo online, save state ou suporte a outras revisões do executável.
+
+The native game difficulty is set to **1 (easiest)** on every launch.

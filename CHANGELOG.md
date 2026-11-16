@@ -7,3 +7,5 @@
 - Pausa com exclusão do tempo suspenso, menu em inglês e cargas ilimitadas de nitro opcionais.
 - Velocidade em km/h, PIN automático, perfil persistente e backups versionados.
 - Build local a partir de executável fornecido pelo usuário, com verificação SHA-256.
+
+- Set native game difficulty to 1 (easiest) on every launch.

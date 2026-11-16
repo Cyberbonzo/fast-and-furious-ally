@@ -1,0 +1,8 @@
+{
+  "WAL_RAWTHRILLS_GAME": "fnf",
+  "WAL_RAWTHRILLS_DIPS": "0",
+  "WAL_RAWTHRILLS_BRAKE": "analog",
+  "WAL_PORT": "33705",
+  "WAL_MAP": "b3=handbrake,b7=button2,b8=button3",
+  "PROTON_DXVK_D3D8": "1"
+}
